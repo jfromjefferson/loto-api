@@ -35,6 +35,6 @@ def test_generate_random_numbers_10_invalid_choices():
     invalid_choices = [1, 2, 3, 4, 26]  # 26 is not a valid number
 
     with pytest.raises(ValueError) as excinfo:
-        generator.generate_random_numbers_10(invalid_choices)
+        generator.generate_random_numbers_10(choices=invalid_choices)
 
     assert "Numbers [26] are not valid" in str(excinfo.value)

@@ -1,5 +1,4 @@
 import random
-from typing import Tuple, Any, List
 
 from .numbers import LOTOFACIL_NUMBERS
 
