@@ -5,6 +5,7 @@ from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
 
 from routers.lotofacil import lotofacil_router
+from routers.price import price_router
 
 limiter = Limiter(
     key_func=get_remote_address,
@@ -34,5 +35,6 @@ async def main():
     }
 
 
+app.include_router(price_router, tags=["price"])
 app.include_router(lotofacil_router, tags=["lotofacil"])
 
